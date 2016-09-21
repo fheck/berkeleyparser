@@ -26,7 +26,7 @@ import edu.berkeley.nlp.util.Numberer;
 
 /**
  * Reads in the Penn Treebank and generates N_GRAMMARS different grammars.
- * 
+ *
  * @author Slav Petrov
  */
 public class BerkeleyParser {
@@ -172,11 +172,11 @@ public class BerkeleyParser {
 		}
 		try {
 			BufferedReader inputData = (opts.inputFile == null) ? new BufferedReader(
-					new InputStreamReader(System.in)) : new BufferedReader(
+					new InputStreamReader(System.in, "UTF-8")) : new BufferedReader(
 					new InputStreamReader(new FileInputStream(opts.inputFile),
 							"UTF-8"));
 			PrintWriter outputData = (opts.outputFile == null) ? new PrintWriter(
-					new OutputStreamWriter(System.out)) : new PrintWriter(
+					new OutputStreamWriter(System.out, "UTF-8")) : new PrintWriter(
 					new OutputStreamWriter(
 							new FileOutputStream(opts.outputFile), "UTF-8"),
 					true);
